@@ -1,7 +1,7 @@
 #include <iostream>
 #include <math.h>
 
-int FunkyCounter = 0, factorCounter = 0;
+int funkyCounter = 0, factorCounter = 0;
 bool isPrimeFlag = true;
 
 bool isPrime (int number) {
@@ -12,13 +12,14 @@ bool isPrime (int number) {
     for (int i = 2; i <= number / 2; i++) {
         if (number % i == 0) {
                factorCounter++;
+               funkyCounter++;
             isPrimeFlag = false;
             
         }  
       }
       return isPrimeFlag;
-        FunkyCounter++;
-}
+        
+} 
 
 
 
@@ -43,9 +44,34 @@ int main() {
         isPrimeFlag = isPrime(number);
             if (isPrimeFlag && number != 1) {
             std::cout << "Your number is prime, +5 Funky points!" << std::endl;
+            funkyCounter = funkyCounter + 5;
             } else {
             std::cout << "Your number is not prime. It has " << factorCounter << " factors. You get +" << factorCounter << " Funky points!" << std::endl;
             }
+        
+            // Random fun facts about certain numbers 
+
+            switch (number) {
+                case 3:
+                    std::cout << "3 is the second most common lucky number among Western countries: +2 Funky points!" << std::endl;
+                    funkyCounter = funkyCounter + 2;
+                    break;
+                case 4:
+                    std::cout << "4 is the only number that is spelt with the same number of letters as itself: +5 Funky points!" << std::endl;
+                    funkyCounter = funkyCounter + 5;
+                    break;
+                case 7: 
+                    std::cout << "7 is the most common lucky number among Western countries: +3 Funky points!" << std::endl;
+                    funkyCounter = funkyCounter + 3;
+                    break;
+                case 8:
+                    std::cout << "8 is the third most common lucky number among Western countries: +1 Funky points!" << std::endl;
+                    funkyCounter = funkyCounter + 1;
+                    break;
+
+            } 
+
+            std::cout << "Your final score is: " << funkyCounter << std::endl;
         
 
 return 0;

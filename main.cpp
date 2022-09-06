@@ -63,10 +63,24 @@ int main() {
                 case 7: 
                     std::cout << "7 is the most common lucky number among Western countries: +3 Funky points!" << std::endl;
                     funkyCounter = funkyCounter + 3;
+                    std::cout << "7 is also a Mersenne prime (a prime number that is one less than a power of two): +3 Funky points!" << std::endl;
+                    funkyCounter = funkyCounter + 3;
                     break;
                 case 8:
                     std::cout << "8 is the third most common lucky number among Western countries: +1 Funky points!" << std::endl;
                     funkyCounter = funkyCounter + 1;
+                    break;
+                case 13:
+                    std::cout << "According to pagan Norse mythology, this is the most unlucky number of them all: -3 Funky points :(" << std::endl;
+                    funkyCounter = funkyCounter - 3;
+                    break;
+                case 17:
+                    std::cout << "In Italy, 17 is an unlucky number: -2 Funky points :(" << std::endl;
+                    funkyCounter = funkyCounter - 2;
+                    break;
+                case 20:
+                    std::cout << "The sum of 20's factors are greater than itself, making it an abundant number: +5 Funky points!" << std::endl;
+                    funkyCounter = funkyCounter + 5;
                     break;
 
             } 
